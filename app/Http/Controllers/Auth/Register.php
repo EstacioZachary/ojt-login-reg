@@ -17,10 +17,19 @@ class Register extends Controller
     {
         // Validate the input
         $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-        ]);
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => [
+            'required',
+            'string',
+            'min:8',               // At least 8 characters
+            'confirmed',           // Must match password_confirmation
+            'regex:/[a-z]/',       // At least one lowercase letter
+            'regex:/[A-Z]/',       // At least one uppercase letter
+            'regex:/[0-9]/',       // At least one digit
+            'regex:/[@$!%*?&]/',   // At least one special character
+                    ],
+                ]);
  
         // Create the user
         $user = User::create([
@@ -33,6 +42,6 @@ class Register extends Controller
         Auth::login($user);
  
         // Redirect to home
-        return redirect('/')->with('success', 'Welcome to Chirper!');
+        return redirect('/')->with('success', 'Welcome to TechCraft!');
     }
 }

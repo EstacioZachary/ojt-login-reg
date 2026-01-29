@@ -68,7 +68,7 @@
                  style="margin-top:12px;">
 
     <h3 class="text-lg font-medium break-words">
-        {{ $craft->title }}:
+        {{ $craft->title }}
     </h3>
 
     <p class="break-words  mt-1">

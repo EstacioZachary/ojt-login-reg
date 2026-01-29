@@ -5,6 +5,7 @@ use Illuminate\Validation\Validator;
 use App\Http\Controllers\Auth\Logout;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Craft;
 
 class CraftController extends Controller
@@ -13,15 +14,12 @@ class CraftController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $crafts = Craft::with('user')
-            ->latest()
-            ->take(50)
-            ->get();
+public function index()
+{
+    $crafts = Craft::with('user')->latest()->take(50)->get();
+    return view('feed', ['crafts' => $crafts]);
+}
 
-        return view('home', ['crafts' => $crafts]);
-    }
 
     /**
      * Show the form for creating a new resource.
@@ -47,7 +45,7 @@ class CraftController extends Controller
 
         ]);
 
-        auth()->user()->crafts()->create($validated);
+        Auth::user()->crafts()->create($validated);
 
         return redirect('/')->with('success', 'Craft posted successfully!');
     }

@@ -8,7 +8,7 @@
         <div class="hero-content flex-col">
             <div class="card w-96 bg-base-100">
                 <div class="card-body">
-                    <h1 class="text-3xl font-bold text-center mb-6">Welcome Back</h1>
+                    <h1 class="text-3xl font-bold text-center mb-6">Welcome Back Crafter!</h1>
 
                     <form method="POST" action="/login">
                         @csrf
@@ -17,9 +17,9 @@
                         <label class="floating-label mb-6">
                             <input type="email"
                                    name="email"
-                                   placeholder="[mail@example.com](<mailto:mail@example.com>)"
+                                   placeholder="sample@email.com"
                                    value="{{ old('email') }}"
-                                   class="input input-bordered @error('email') input-error @enderror"
+                                   class="focus:border-sky-500 focus:outline focus:outline-sky-500 disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-500 disabled:shadow-none dark:disabled:border-gray-700 dark:disabled:bg-gray-800/20 input input-bordered @error('email') input-error @enderror"
                                    required
                                    autofocus>
                             <span>Email</span>

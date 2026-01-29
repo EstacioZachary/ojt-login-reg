@@ -6,19 +6,24 @@ use App\Http\Controllers\Auth\Logout;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\Login;
 
+// Landing Page
+Route::get('/', function () {
+    return view('landing'); // Landing page
+});
 
-//Landing Page
-Route::get('/', [CraftController::class, 'index']);
+// Feed page (everyone can see)
+Route::get('/feed', [CraftController::class, 'index'])->name('feed');
 
-//Protected CRUD Routes for Posts
+// Protected CRUD Routes for Posts
 Route::middleware(['auth'])->group(function () {
-    
-    Route::post('/crafts', [CraftController::class, 'store']);
+    Route::post('/crafts', [CraftController::class, 'store']); // Only logged-in users can post
     Route::get('/crafts/{craft}/edit', [CraftController::class, 'edit']);
     Route::put('/crafts/{craft}', [CraftController::class, 'update']);
     Route::delete('/crafts/{craft}', [CraftController::class, 'destroy']);
-
 });
+
+// About Page
+Route::view('/about', 'about');
 
 // Reg Routes
 Route::view('/register', 'auth.register')

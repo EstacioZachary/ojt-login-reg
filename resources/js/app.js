@@ -21,3 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logoutForm = document.getElementById('logout-form');
+
+    logoutForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // prevent immediate submission
+
+        if (confirm("Are you sure you want to logout?")) {
+            logoutForm.submit(); // submit only if user confirms
+        }
+    });
+});
+
