@@ -7,7 +7,7 @@ This project was developed as part of an **On-the-Job Training (OJT)** activity/
 
 ---
 
-## Table of Condiments
+## Table of Contents
 
 1. [Features](#features)
 2. [Tech Stack](#tech-stack)
@@ -18,7 +18,7 @@ This project was developed as part of an **On-the-Job Training (OJT)** activity/
 7. [Tested On](#tested-on)
 8. [Additional Notes](#additional-notes)
 9. [Author](#author)
-10.[License](#license)
+10. [License](#license)
 
 ## Features
 
