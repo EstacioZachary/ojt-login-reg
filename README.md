@@ -1,9 +1,9 @@
 # TechCraft 🎮⚙️
 
 TechCraft is a Laravel-based web application inspired by Laravel Bootcamp’s *Chirper* project.  
-It serves as a platform where users can showcase games they’ve created by posting a title and description, while enforcing proper authentication, authorization, and validation.
+It serves as a platform where users can showcase games they’ve created by posting a title and description, while adopting proper authentication, authorization, and validation.
 
-This project was developed as part of an **On-the-Job Training (OJT)** requirement.
+This project was developed as part of an **On-the-Job Training (OJT)** activity/requirement.
 
 ---
 
@@ -11,12 +11,12 @@ This project was developed as part of an **On-the-Job Training (OJT)** requireme
 
 - Public landing page and feed (viewable by all users)
 - User authentication (Register / Login / Logout)
-- Secure session handling
+- Proper session handling
 - CRUD operations for game posts (“Crafts”)
 - Authorization (users can only edit/delete their own posts)
-- Input validation with custom error messages
-- Responsive UI using **Tailwind CSS + DaisyUI**
-- SQLite database (easy local setup)
+- Input validation with proper error messages
+- Basic UI **Tailwind CSS + DaisyUI**
+- SQLite database (local setup)
 
 ---
 
@@ -130,7 +130,11 @@ Visit the app at:
 ```
 http://127.0.0.1:8000
 ```
+Or if current port is not responding, try:
 
+```bash
+php -S 127.0.0.1:9000 -t public
+```
 ---
 
 ## 🔐 Authentication & Security Notes
@@ -170,14 +174,14 @@ resources/
 
 ## 🧪 Tested On
 
-- Windows 10 / 11
-- Ubuntu 20.04+
+- Windows 11
+- Ubuntu 24.04.3 LTS
 - PHP 8.2+
 - Laravel 11
 
 ---
 
-## 📌 Notes for Development
+## 📌 Additional Notes
 
 - `.env` is intentionally ignored in `.gitignore`
 - Run `php artisan migrate:fresh` if database issues occur
@@ -187,7 +191,7 @@ resources/
 
 ## 👨‍💻 Author
 
-Developed by **[Your Name]**  
+Developed by **Zachary Andrae V. Estacio**  
 For OJT / academic purposes
 
 ---
