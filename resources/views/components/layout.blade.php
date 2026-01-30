@@ -13,7 +13,7 @@
 
 <body class="min-h-screen flex flex-col bg-base-200 font-sans text-base-content">
 
-    <nav class="navbar bg-base-100/80 backdrop-blur border-b border-cyan-500/10">
+    <nav  style = "z-index:999999" class="navbar bg-base-100/80 backdrop-blur border-b border-cyan-500/10 sticky top-0 bg-white shadow-md">
         <div class="navbar-start">
             <a href="/" class="btn btn-ghost text-xl font-extrabold tracking-wide">
                 ⚙️ TechCraft
@@ -21,17 +21,17 @@
         </div>
 
         <div class="navbar-center hidden md:flex gap-2">
-            <a href="/" class="btn btn-ghost btn-sm font-semibold hover:text-cyan-400">Home</a>
-            <a href="/about" class="btn btn-ghost btn-sm font-semibold hover:text-cyan-400">About</a>
-            <a href="{{ route('feed') }}" class="btn btn-ghost btn-sm font-semibold hover:text-cyan-400">Crafts</a>
-            <a href="#contact" class="btn btn-ghost btn-sm font-semibold hover:text-cyan-400">Contact</a>
+            <a href="/" class="btn btn-ghost btn-sm font-semibold hover:text-blue-400">Home</a>
+            <a href="/about" class="btn btn-ghost btn-sm font-semibold hover:text-blue-400">About</a>
+            <a href="{{ route('feed') }}" class="btn btn-ghost btn-sm font-semibold hover:text-blue-400">Crafts</a>
+            <a href="#contact" class="btn btn-ghost btn-sm font-semibold hover:text-blue-400">Contact</a>
         </div>
 
         <div class="navbar-end gap-2">
             @auth
                 <span class="text-sm opacity-80">{{ auth()->user()->name }}</span>
 
-                <form method="POST" action="/logout">
+                <form method="POST" action="/logout" class="inline" id="logout-form">
                     @csrf
                     <button type="submit" class="btn btn-ghost btn-sm hover:text-red-400">
                         Logout
@@ -47,14 +47,15 @@
             @endauth
         </div>
     </nav>
+        
 
     <main class="flex-1 container mx-auto px-4 py-12 min-w-0">
         {{ $slot }}
     </main>
 
-    <footer class="footer footer-center p-6 bg-base-300 border-t border-cyan-500/10 text-xs text-base-content/70">
+    <footer class="footer footer-center p-6 bg-base-300 border-t border-cyan-500/10 text-xs text-base-content/70 whitespace-nowrap">
         <div>
-            <p>© {{ date('Y') }} TechCraft · Built for creators</p>
+            <p>© {{ date('Y') }} TechCraft · <p class="text-blue-500 underline hover:text-blue-700">tech@craft.com</p></p>
         </div>
     </footer>
 

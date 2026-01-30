@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot:title>TechCraft</x-slot:title>
 
-    <section class="relative min-h-[calc(100vh-9rem)] flex items-center bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white">
+    <section class=" relative min-h-[calc(100vh-9rem)] flex items-center bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 text-white">
         <div class="absolute inset-0 bg-black/30"></div>
 
         <div class="relative max-w-4xl mx-auto text-center px-6 space-y-8">
