@@ -16,7 +16,11 @@ class CraftController extends Controller
      */
 public function index()
 {
-    $crafts = Craft::with('user')->latest()->take(50)->get();
+    $crafts = Craft::with('user')
+    ->latest()
+    ->take(50)
+    ->get();
+    
     return view('feed', ['crafts' => $crafts]);
 }
 
