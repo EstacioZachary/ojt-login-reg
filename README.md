@@ -7,7 +7,20 @@ This project was developed as part of an **On-the-Job Training (OJT)** activity/
 
 ---
 
-## ✨ Features
+## Table of Condiments
+
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Requirements](#requirements)
+4. [Installation & Setup](#installation-&-setup)
+5. [Authentication & Security Notes](#authentication-&-security-notes)
+6. [Project Structure](#project-structure)
+7. [Tested On](#tested-on)
+8. [Additional Notes](#additional-notes)
+9. [Author](#author)
+10.[License](#license)
+
+## Features
 
 - Public landing page and feed (viewable by all users)
 - User authentication (Register / Login / Logout)
@@ -20,7 +33,7 @@ This project was developed as part of an **On-the-Job Training (OJT)** activity/
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Backend:** Laravel
 - **Frontend:** Blade, Tailwind CSS, DaisyUI
@@ -31,7 +44,7 @@ This project was developed as part of an **On-the-Job Training (OJT)** activity/
 
 ---
 
-## 📋 Requirements
+## Requirements
 
 Make sure you have the following installed:
 
@@ -41,14 +54,14 @@ Make sure you have the following installed:
 - npm
 - Git
 
-> ✅ On Ubuntu, PHP extensions are usually installed automatically  
-> ✅ On Windows, Laravel Herd is recommended
+> - On Ubuntu, PHP extensions are usually installed automatically  
+> - On Windows, Laravel Herd is recommended
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
-### 1️⃣ Clone the repository
+### 1️Clone the repository
 
 ```bash
 git clone https://github.com/your-username/techcraft.git
@@ -57,7 +70,7 @@ cd techcraft
 
 ---
 
-### 2️⃣ Install PHP dependencies
+### 2️Install PHP dependencies
 
 ```bash
 composer install
@@ -65,7 +78,7 @@ composer install
 
 ---
 
-### 3️⃣ Install Node dependencies
+### 3️Install Node dependencies
 
 ```bash
 npm install
@@ -73,7 +86,7 @@ npm install
 
 ---
 
-### 4️⃣ Environment configuration
+### 4️Environment configuration
 
 Create the environment file:
 
@@ -89,7 +102,7 @@ php artisan key:generate
 
 ---
 
-### 5️⃣ Database setup (SQLite)
+### 5️Database setup (SQLite)
 
 Create the SQLite database file:
 
@@ -105,7 +118,7 @@ DB_CONNECTION=sqlite
 
 ---
 
-### 6️⃣ Run migrations
+### 6️Run migrations
 
 ```bash
 php artisan migrate
@@ -113,7 +126,7 @@ php artisan migrate
 
 ---
 
-### 7️⃣ Run the application
+### 7️Run the application
 
 #### Start the backend server
 ```bash
@@ -137,7 +150,7 @@ php -S 127.0.0.1:9000 -t public
 ```
 ---
 
-## 🔐 Authentication & Security Notes
+## Authentication & Security Notes
 
 - Sessions are properly invalidated on logout
 - CSRF protection is enabled
@@ -149,7 +162,7 @@ php -S 127.0.0.1:9000 -t public
 
 ---
 
-## 📁 Project Structure (Key Parts)
+## Project Structure
 
 ```
 app/
@@ -172,7 +185,7 @@ resources/
 
 ---
 
-## 🧪 Tested On
+## Tested On
 
 - Windows 11
 - Ubuntu 24.04.3 LTS
@@ -181,7 +194,7 @@ resources/
 
 ---
 
-## 📌 Additional Notes
+## Additional Notes
 
 - `.env` is intentionally ignored in `.gitignore`
 - Run `php artisan migrate:fresh` if database issues occur
@@ -189,13 +202,13 @@ resources/
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Developed by **Zachary Andrae V. Estacio**  
 For OJT / academic purposes
 
 ---
 
-## 📄 License
+## License
 
 This project is for educational purposes only.
