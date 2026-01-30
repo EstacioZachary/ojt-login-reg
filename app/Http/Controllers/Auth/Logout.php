@@ -18,6 +18,6 @@ class Logout extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/')->with('success', 'You\'ve been logged out successfully.');
+        return redirect('/login')->with('success', 'You\'ve been logged out successfully.');
     }
 }

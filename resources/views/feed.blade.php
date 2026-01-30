@@ -57,7 +57,7 @@
                         <input
                             type="text"
                             name="title"
-                            placeholder="Login to post a game"
+                            placeholder="You must be logged in to post a game"
                             class="input input-bordered w-full cursor-not-allowed"
                             disabled
                         />
@@ -65,7 +65,7 @@
 
                     <div class="form-control w-full">
                         <textarea
-                            placeholder="Login to post a game"
+                            placeholder="You must be logged in to post a game"
                             class="textarea textarea-bordered w-full resize-none cursor-not-allowed"
                             rows="5"
                             disabled

@@ -19,7 +19,7 @@
                                    name="email"
                                    placeholder="sample@email.com"
                                    value="{{ old('email') }}"
-                                   class="focus:border-sky-500 focus:outline focus:outline-sky-500 disabled:border-gray-200 disabled:bg-gray-50 disabled:text-gray-500 disabled:shadow-none dark:disabled:border-gray-700 dark:disabled:bg-gray-800/20 input input-bordered @error('email') input-error @enderror"
+                                   class="w-full input input-bordered @error('email') input-error @enderror"
                                    required
                                    autofocus>
                             <span>Email</span>

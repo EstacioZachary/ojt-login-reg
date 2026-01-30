@@ -5,7 +5,7 @@
         Register
     </x-slot:title>
 
-    <div class="hero min-h-[calc(100vh-16rem)] bg-gradient-to-b from-indigo-100 via-white to-indigo-100">
+    <div class="hero min-h-[calc(100vh-16rem)]">
         <div class="hero-content flex-col">
             <div class="card w-96 bg-base-100 shadow-lg rounded-xl">
                 <div class="card-body">
