@@ -75,7 +75,7 @@
 
                 <!-- Actions -->
                 <div class="flex justify-end pt-2 border-t border-base-300">
-                    <button type="submit" class="btn btn-primary btn-sm" id="craft-submit">
+                    <button href="/feed" type="submit" class="btn btn-primary btn-sm" id="craft-submit">
                         Submit Craft
                     </button>
                 </div>

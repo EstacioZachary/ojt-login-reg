@@ -16,10 +16,7 @@
             <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
                 @guest
                     <a href="{{ route('register') }}" class="btn btn-info btn-lg shadow-xl hover:scale-105 transition">
-                        Get Started
-                    </a>
-                    <a href="{{ route('login') }}" class="btn btn-ghost btn-lg text-white hover:bg-white/10">
-                        Login
+                        Join TechCraft
                     </a>
                 @else
                     <a href="{{ route('feed') }}" class="btn btn-info btn-lg shadow-xl hover:scale-105 transition">
@@ -132,12 +129,6 @@
             <p class="text-lg text-white/90 max-w-2xl mx-auto">
                 Join a tech-focused community where innovation meets creativity.
             </p>
-
-            @guest
-                <a href="{{ route('register') }}" class="btn btn-info btn-lg shadow-xl hover:scale-105 transition">
-                    Join TechCraft
-                </a>
-            @endguest
         </div>
     </section>
 </x-layout>

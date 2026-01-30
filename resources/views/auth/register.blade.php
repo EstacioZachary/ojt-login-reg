@@ -59,9 +59,12 @@
                                 <i class="fa-regular fa-eye text-lg"></i>
                             </button>
                         </label>
-                        <p class="text-xs text-base-content/70 mb-2">
-                            Minimum 8 characters, with at least 1 uppercase, 1 lowercase, 1 number, and 1 symbol.
-                        </p>
+                        <ul id="password-rules" class="text-xs mt-2 space-y-1">
+                        <li data-rule="length" class="text-gray-500">At least 8 characters</li>
+                        <li data-rule="lower" class="text-gray-500">At least 1 lowercase letter</li>
+                        <li data-rule="upper" class="text-gray-500">At least 1 uppercase letter</li>
+                        <li data-rule="number" class="text-gray-500">At least 1 number</li>
+                        <li data-rule="symbol" class="text-gray-500">At least 1 special character</li></ul>
                         @error('password')
                         <p class="text-xs text-error mt-1">{{ $message }}</p>
                         @enderror
@@ -83,8 +86,9 @@
                                 <i class="fa-regular fa-eye text-lg"></i>
                             </button>
                         </label>
+                        <p id="password-match" class="text-xs text-gray-400">Password must match.</p>
 
-                        <!-- Submit Button -->
+                        {{-- Submit Button --}}
                         <div class="form-control mt-6">
                             <button type="submit" class="btn btn-primary w-full">
                                 Register

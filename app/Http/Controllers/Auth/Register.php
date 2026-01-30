@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class Register extends Controller
 {
@@ -22,12 +23,11 @@ class Register extends Controller
         'password' => [
             'required',
             'string',
-            'min:8',               // At least 8 characters
-            'confirmed',           // Must match password_confirmation
-            'regex:/[a-z]/',       // At least one lowercase letter
-            'regex:/[A-Z]/',       // At least one uppercase letter
-            'regex:/[0-9]/',       // At least one digit
-            'regex:/[@$!%*?&]/',   // At least one special character
+            'confirmed',
+           Password::min(8)
+                ->mixedCase()
+                ->numbers()
+                ->symbols(),
                     ],
                 ]);
  
