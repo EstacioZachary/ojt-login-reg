@@ -1,0 +1,20 @@
+# Node and frontend
+node_modules
+npm-debug.log
+yarn.lock
+pnpm-lock.yml
+
+#PHP / Laravel
+.env
+storage/logs
+storage/framework/cache
+storage/framework/sessions
+storage/framework/views
+
+#git
+.git
+.gitignore
+
+#DS / editor junk
+.DS_Store
+Thumbs.db
